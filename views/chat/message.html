@@ -1,0 +1,10 @@
+<div class="message col-md-12">
+	<div class="u-color-{{ message.user.id }} col-md-2">
+		{{ message.user.nickname }}
+	</div>
+	<div class="col-md-10 padding-all">
+		<div class="u-msg-{{ message.user.id }}">
+			{{ message.message|linebreaksbr|urlize|safe }}
+		</div>
+	</div>
+</div>

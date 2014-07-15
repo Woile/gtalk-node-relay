@@ -1,0 +1,14 @@
+{
+  "name": "chatbot",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies" : {
+    "request"           : "latest",
+    "node-xmpp-client"  : "latest",
+    "sequelize"         : "latest",
+    "body-parser"       : "latest",
+    "sqlite3"           : "latest",
+    "nunjucks"          : "latest",
+    "express"           : "4.x"
+  }
+}

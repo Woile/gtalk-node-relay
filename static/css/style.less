@@ -1,0 +1,71 @@
+.body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+.user-color {
+	text-shadow: 0px 1px 1px #000;
+	font-size: 16px;	
+	text-align: center;
+	border-radius: 7px;
+	
+	height: 40px;
+	margin: 5px 0px;
+	padding: 0 5px;
+	line-height: 38px;
+}
+
+.padding-all {
+	padding: 5px;
+}
+
+.user-color-loop-even(@counter) when (mod(@counter,2) > 0) {
+	.u-color-@{counter} {
+		.user-color();
+		background-color: hsl(@counter*10, 98%, 60%);
+		border-bottom: 3px solid hsl(@counter*10, 98%, 40%);
+		color: hsl(@counter*10, 98%, 20%);
+	}
+}
+
+.user-color-loop-odd(@counter) when (mod(@counter,2) = 0) {
+	.u-color-@{counter} {
+		.user-color();
+		background-color: hsl(@counter*10, 88%, 60%);
+		border-bottom: 3px solid hsl(@counter*10, 88%, 40%);
+		color: hsl(@counter*10, 88%, 20%);
+	}
+}
+
+.user-color-loop(@counter) when (@counter/2 > 0) {
+	.user-color-loop((@counter - 1));
+    .user-color-loop-odd(@counter);
+	.user-color-loop-even(@counter);
+
+	.u-msg-@{counter} {
+		background-color: hsl(@counter*10, 10%, 90%);
+		border-bottom: 3px solid hsl(@counter*10, 10%, 70%);
+		border-radius: 7px;
+		margin-top: 3px;
+		float: left;
+		color: hsl(@counter*10, 98%, 20%);
+		padding: 3px 10px;
+	}
+
+	.u-msg-@{counter}:after {
+		left: -5px;
+		top: 22px;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(59, 6, 36, 0);
+		border-right-color: hsl(@counter*10, 10%, 90%);
+		border-width: 5px;
+		margin-top: -5px;
+	}
+
+}
+
+.user-color-loop(36);
