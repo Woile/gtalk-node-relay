@@ -263,6 +263,7 @@ function updateRosterLoop(){
 conn.on('online', function(){
     setStatusMessage("I'm always online");
     updateRosterLoop();
+    requestGoogleRoster();
     console.log("Online");
 });
 

@@ -1,5 +1,5 @@
 {
-  "name": "chatbot",
+  "name": "gtalk-node-relay",
   "private": true,
   "version": "0.0.1",
   "dependencies" : {
