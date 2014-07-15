@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies" : {
     "request"           : "latest",
+    "node-xmpp"     		: "latest",
     "node-xmpp-client"  : "latest",
     "sequelize"         : "latest",
     "body-parser"       : "latest",
