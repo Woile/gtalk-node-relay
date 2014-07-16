@@ -7,7 +7,7 @@ Create a config.js (you can modify config.sample.js) and then:
 
 ```
 npm install
-node app.js
+npm start
 ```
 
 
